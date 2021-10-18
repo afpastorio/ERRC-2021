@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Francisco Pastório"
+  given-names: "André"
+  orcid: "https://orcid.org/0000-0001-9389-2498"
+- family-names: "Pedro"
+  given-names: "João"
+title: "Fundamentos de LoRaWAN - Teoria e Prática"
+date-released: 2021-10-28
+url: "https://github.com/afpastorio/ERRC-2021"
