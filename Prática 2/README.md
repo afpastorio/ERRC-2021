@@ -13,10 +13,9 @@ Com o _gateway_ configurado é momento de adicionar uma aplicação. Na seção 
 
 No painel da aplicação precisamos adicionar um dispositivo final. Basta clicar em _Add End Device_. Mudamos para configuração manual e selecionamos a versão LoRaWAN e o plano de frequência. As chaves podem ser geradas automaticamente, destaque para AppEUI que deve ter pelo menos um número diferente de zero. Esse processo pode ser visto na figura abaixo. 
 
-<p align="center">
-    <img src="img/end-registration.svg">
-    Registrando dispositivo final.
-</p>
+<center><img src="img/end-registration.svg"><\center>
+<center>Registrando dispositivo final.</center>
+
 
 Para a programação do dispositivo será utilizada a última versão da biblioteca [arduino-lmic](https://github.com/mcci-catena/arduino-lmic). Podendo ser instalada tanto pelo gerenciador de bibliotecas quanto manualmente. O código está disponibilizado neste repositório, sendo necessário somente modificar as chaves para corresponder com o dispositivo criado conforme apresentado abaixo.
 
