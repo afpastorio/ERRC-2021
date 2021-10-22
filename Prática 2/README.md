@@ -48,7 +48,7 @@ Uma vez que o dispositivo foi programado basta ligá-lo e o tráfego de mensagen
   <img width="600" src="img/live-data.svg">
 </p>
 
-Exemplificando como enviar as mensagens para um servidor de aplicação utilizaremos a plataforma [TagoIO](https://tago.io/). Para isso, acessamos o site e geramos uma nova chave de autorização, em _Devices_ clicando em _Authorization_. Nesta seção pode-se dar um nome a chave e clicar em _Generate_. Está chave é necessária para realizar a integração entre TTS e TagoIO. Ainda em {_Devices_, adicionamos um novo dispositivo clicando em _Add Device_. Selecionamos a opção de dispositivo customizado presente em _LoRaWAN TTI/TTN v3_, atribuímos um nome ao dispositivo e colocamos o seu respectivo _DevEUI_.
+Exemplificando como enviar as mensagens para um servidor de aplicação utilizaremos a plataforma [TagoIO](https://tago.io/). Para isso, acessamos o site e geramos uma nova chave de autorização, em _Devices_ clicando em _Authorization_. Nesta seção pode-se dar um nome a chave e clicar em _Generate_. Está chave é necessária para realizar a integração entre TTS e TagoIO. Ainda em _Devices_, adicionamos um novo dispositivo clicando em _Add Device_. Selecionamos a opção de dispositivo customizado presente em _LoRaWAN TTI/TTN v3_, atribuímos um nome ao dispositivo e colocamos o seu respectivo _DevEUI_.
 
 <p align="center">
   <img width="600" src="img/tago-devices.svg">
@@ -56,12 +56,9 @@ Exemplificando como enviar as mensagens para um servidor de aplicação utilizar
 
 De volta a TTS, adiconamos um _WebHook_ para à TagoIO em _Integrations_, selecionando a opção TagoIO, como demonstrado na Figura abaixo. Neste momento, inserimos um nome para a integração e a chave gerada anteriormente pela TagoIO. Finalizando o processo de criação da integração ao clicar em _Create tagoio webhook_.
 
-\begin{figure}[!htb]
-    \centering
-    \includesvg[width =.8\textwidth]{img/tago-tts.svg}
-    \caption{Seção de integrações \textit{Webhooks} da TTS.}
-    \label{fig:tago_tts}
-\end{figure}
+<p align="center">
+  <img width="600" src="img/tago-tts.svg">
+</p>
 
 Alterando o código para enviar um valor de um contador conforme pressionamos um botão e também _Payload Formatter_ para decodificar os _bytes_ em um número inteiro, como no código abaixo.
 
@@ -94,4 +91,4 @@ Como a variável a ser exibida é do tipo numérica, adicionamos um _Display_. A
 </p>
 
 
-Desta forma, toda vez que o botão do ESP32 Heltec for pressionado, o valor de _counter_ será incrementado e enviado para o servidor de rede TTS. O servidor decodifica e encaminha a mensagem para o servidor de aplicação, TagoIO, que por sua vez faz a exibição dos dados.
+Desta forma, toda vez que o botão do ESP32 Heltec for pressionado, o valor de _counter_ será incrementado e enviado para o servidor de rede TTS. O servidor decodifica e encaminha a mensagem para o servidor de aplicação, TagoIO, que por sua vez faz a exibição dos dados. E pode ser visto no painel público disponibilizado, [TagoERRC](https://admin.tago.io/public/dashboard/6171707233935b001165d9f6/9a58c3d5-cf9c-4a15-880e-45e97ce1a1e5).
