@@ -29,6 +29,16 @@
             "projectEnvName": "heltec_wifi_lora_32_V2",
             "toolchainBinDir": "C:/.platformio/packages/toolchain-xtensa32/bin",
             "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug (without uploading)",
+            "executable": "C:/Users/Angelo/Documents/PlatformIO/Projects/ERRC 2021/Prática 2/.pio/build/heltec_wifi_lora_32_V2/firmware.elf",
+            "projectEnvName": "heltec_wifi_lora_32_V2",
+            "toolchainBinDir": "C:/.platformio/packages/toolchain-xtensa32/bin",
+            "internalConsoleOptions": "openOnSessionStart",
+            "loadMode": "manual"
         }
     ]
 }

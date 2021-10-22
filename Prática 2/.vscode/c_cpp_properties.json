@@ -205,7 +205,7 @@
                 ]
             },
             "defines": [
-                "PLATFORMIO=50201",
+                "PLATFORMIO=50202",
                 "ARDUINO_HELTEC_WIFI_LORA_32_V2",
                 "ESP32",
                 "ESP_PLATFORM",
