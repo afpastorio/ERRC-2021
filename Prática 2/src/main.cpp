@@ -57,7 +57,7 @@ bool flag = false; // Flag para debounce
 
 // Schedule TX every this many seconds (might become longer due to duty
 // cycle limitations).
-const unsigned TX_INTERVAL = 60; // Intervalo de transmissão
+const unsigned TX_INTERVAL = 30; // Intervalo de transmissão
 
 // Mapa de pinos
 const lmic_pinmap lmic_pins = {
@@ -150,7 +150,7 @@ void onEvent(ev_t ev)
             Serial.print(LMIC.dataLen);
             Serial.println(F(" bytes of payload"));
         }
-        // Agenda a transmissão automática com intervalo de TX_INTERVAL - Prática 2, parte 1
+        // Agenda a transmissão automática com intervalo de TX_INTERVAL - Prática 2, parte 1 ---------------------------------
         // os_setTimedCallback(&sendjob, os_getTime() + sec2osticks(TX_INTERVAL), do_send);
         break;
     case EV_LOST_TSYNC:
@@ -196,7 +196,12 @@ void do_send(osjob_t *j)
     }
     else
     {
-        // Codificação da mensagem em bytes, dividindo um inteiro em 2 bytes - Prática 2, parte 2
+        // Prática 2 parte 1
+        // LMIC_setTxData2(1, payload, sizeof(payload)-1, 0);
+        // Serial.println("Packet queued");
+        
+        // Prática 2, parte 2
+        // Codificação da mensagem em bytes, dividindo um inteiro em 2 bytes
         payload[0] = highByte(mydata);
         payload[1] = lowByte(mydata);
         // Prepare upstream data transmission at the next possible time.
